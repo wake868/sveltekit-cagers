@@ -18,6 +18,7 @@
           }
           photos {
             url
+            handle
           }
         }
       }
@@ -50,7 +51,10 @@
   <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-1">
     {#each article.photos as photo}
       <a href={photo.url} target="_blank">
-        <img src={photo.url} alt="basketball" />
+        <img
+          src="https://media.graphcms.com/resize=fit:clip,width:250/{photo.handle}"
+          alt="basketball"
+        />
       </a>
     {/each}
   </div>
